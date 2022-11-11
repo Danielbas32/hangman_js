@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hangman Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <img src="./images/logo_01.svg" alt="logo-type-app" class="logo_ini">
+    <main class="screen">
+
+        <div id="div-disappear" class="button-home">
+            <a href="#forca">
+                <input class="button-star" type="submit" value="Start game" id="star-game" onclick="star_game()" />
+            </a>
+            <button class="btn-add-word" id="new-word" onclick="view_new_word()">Add word</button>
+        </div>
+
+        <div id="add-new-word" class="new-word-all">
+            <input class="text-input" type="text" id="input-new-word" maxlength="10" placeholder="Write a word">
+            <div class="form-group">
+                <img src="images/!.png" class="img-alert">
+                <label class="write"for="input-texto"> Máx. 10 characters</label>
+            </div>
+            <div class="button-div">
+                <input class="btn-blue" type="submit" value="Save to go" id="btn-save">
+                <input class="btn-white" type="submit" value="Cancel" id="btn-cancel">
+            </div>
+        </div>
+
+        <div id="div-appear" class="canvas">
+            <canvas class="board" id="gallows" width="1200" height="860"></canvas>
+            <div class="underlined"></div>
+            <div class="button-div-canvas">
+                <input class="btn-blue" type="submit" value="New game" id="btn-new-game">
+                <input class="btn-white" type="submit" value="Exit" id="btn-exit">
+            </div>
+        </div>
+
+    </main>
+    <script src="hagman.js"></script>
+    <script src="canvas.js"></script>
+</body>
+
+</html>
